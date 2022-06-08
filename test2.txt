@@ -3,3 +3,17 @@
 
 这是在dev分支创建的内容
 
+//请求拦截
+axios.interceptors.request.use((config)=>{
+	return config
+},function(err)=>{
+	return Promise.reject(err)
+})
+
+//响应拦截
+axios.interceptors.response.use((response)=>{
+	return response
+},function(err)=>{
+	return Promise.reject(err)
+})
+
